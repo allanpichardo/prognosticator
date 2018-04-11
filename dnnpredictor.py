@@ -43,7 +43,7 @@ def init_model():
         n_classes=3,
         model_dir='./models',
         feature_columns=pipeline.get_feature_columns(),
-        activation_fn=tf.relu,
+        activation_fn=tf.nn.relu,
         optimizer=tf.train.Momentum(learning_rate=0.01, lr_decay=0.96, decay_step=100)
     )
 
