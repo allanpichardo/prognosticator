@@ -39,7 +39,7 @@ pipeline = DataPipeline('./csv/train/combined.csv', './csv/test/combined.csv')
 def init_model():
     
     model = tf.estimator.DNNClassifier(
-        hidden_units=[80, 80, 60, 60, 30, 30],
+        hidden_units=[9, 9],
         n_classes=3,
         model_dir='./models',
         feature_columns=pipeline.get_feature_columns(),
