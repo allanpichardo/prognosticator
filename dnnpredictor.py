@@ -44,7 +44,7 @@ def init_model():
         model_dir='./models',
         feature_columns=pipeline.get_feature_columns(),
         activation_fn=tf.nn.relu,
-        optimizer=tf.train.AdadeltaOptimizer(learning_rate=0.0001)
+        optimizer=tf.train.AdadeltaOptimizer(learning_rate=1.0, epsilon=1e-6)
     )
 
     # model = tf.estimator.DNNRegressor(
