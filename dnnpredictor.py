@@ -33,7 +33,7 @@ STEPS = (275 / BATCH_SIZE) * EPOCHS
 EVAL_STEPS = (96 / EVAL_BATCH_SIZE) * EPOCHS
 LEARNING_RATE = 0.01
 
-pipeline = DataPipeline('./csv/train', './csv/test')
+pipeline = DataPipeline('./csv/train/combined.csv', './csv/test/combined.csv')
 
 
 def init_model():
