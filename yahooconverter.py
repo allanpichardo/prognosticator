@@ -107,8 +107,8 @@ def yahoo_csv_to_dataframe(file_path):
     corpus = corpus.iloc[19:]
 
     print('Normalizing...')
-    corpus['percent_b'] = percent_b_indicator(corpus['adj_close'], corpus['upper_band'], corpus['lower_band'])
-    corpus['band_width'] = band_width_indicator(corpus['upper_band'], corpus['lower_band'], corpus['sma_20'])
+    # corpus['percent_b'] = percent_b_indicator(corpus['adj_close'], corpus['upper_band'], corpus['lower_band'])
+    # corpus['band_width'] = band_width_indicator(corpus['upper_band'], corpus['lower_band'], corpus['sma_20'])
     # corpus['sma_20'] = pct_change(corpus['adj_close'], corpus['sma_20'])
     # corpus['upper_band'] = pct_change(corpus['adj_close'], corpus['upper_band'])
     # corpus['lower_band'] = pct_change(corpus['adj_close'], corpus['lower_band'])

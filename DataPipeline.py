@@ -6,9 +6,7 @@ from yahooconverter import percent_b_indicator, pct_change, band_width_indicator
 class DataPipeline:
     
     COLUMNS = [
-        'adj_close',
-        'percent_b',
-        'band_width',
+        'adj_close',,
         'p_b_ratio',
         'p_e_ratio',
         'eps_diluted',
@@ -16,8 +14,6 @@ class DataPipeline:
     ]
 
     FIELD_DEFAULTS = [
-        [0.0],
-        [0.0],
         [0.0],
         [0.0],
         [0.0],
