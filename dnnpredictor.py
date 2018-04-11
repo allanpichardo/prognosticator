@@ -27,10 +27,10 @@ from DataPipeline import DataPipeline
 
 
 EPOCHS = 100
-BATCH_SIZE = 30
-EVAL_BATCH_SIZE = 20
-STEPS = (275 / BATCH_SIZE) * EPOCHS
-EVAL_STEPS = (96 / EVAL_BATCH_SIZE) * EPOCHS
+BATCH_SIZE = 50
+EVAL_BATCH_SIZE = 15
+STEPS = (573 / BATCH_SIZE) * EPOCHS
+EVAL_STEPS = (156 / EVAL_BATCH_SIZE) * EPOCHS
 LEARNING_RATE = 0.01
 
 pipeline = DataPipeline('./csv/train/combined.csv', './csv/test/combined.csv')
