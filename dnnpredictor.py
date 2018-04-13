@@ -38,13 +38,15 @@ pipeline = DataPipeline('./csv/train/combined.csv', './csv/test/combined.csv')
 
 def init_model():
     
-    model = tf.estimator.DNNClassifier(
-        hidden_units=[9, 9],
+    model = tf.estimator.DNNLinearCombinedClassifier(
+        dnn_hidden_units=[3, 3],
         n_classes=3,
         model_dir='./models',
-        feature_columns=pipeline.get_feature_columns(),
-        activation_fn=tf.nn.relu,
-        optimizer=tf.train.AdadeltaOptimizer(learning_rate=1.0, epsilon=1e-6)
+        linear_feature_columns=pipeline.get_feature_columns(),
+        dnn_feature_columns=pipeline.get_feature_columns(),
+        dnn_activation_fn=tf.nn.softmax,
+        # linear_optimizer=tf.train.MomentumOptimizer(learning_rate=0.1, momentum=0.75),
+        # dnn_optimizer=tf.train.AdadeltaOptimizer(learning_rate=1, epsilon=1e-4)
     )
 
     # model = tf.estimator.DNNRegressor(

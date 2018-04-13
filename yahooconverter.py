@@ -68,6 +68,7 @@ def create_composite_dataframe(yahoo, stockpup):
     combined['next_price'] = combined['adj_close'].shift(-1)
     combined['next_price'] = calculate_action_class(combined['adj_close'], combined['next_price'])
     combined = combined.iloc[:-1]
+    combined = combined.drop(labels=['adj_close'], axis=1)
 
     return combined
 
